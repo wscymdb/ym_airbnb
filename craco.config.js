@@ -16,4 +16,14 @@ module.exports = {
       '@': resolve('src'),
     },
   },
+  //
+  devServer: {
+    proxy: {
+      '/api': {
+        target: 'http://codercba.com:1888/airbnb',
+        changeOrigin: true,
+        // pathRewrite: { '^/api': '' },
+      },
+    },
+  },
 }
