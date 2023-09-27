@@ -1,5 +1,7 @@
 import { request } from '@/services'
 import React, { memo, useEffect } from 'react'
+import { HomeWrapper } from './style'
+import HomeBanner from './c-cpns/home-banner'
 
 const Home = memo(() => {
   useEffect(() => {
@@ -11,7 +13,11 @@ const Home = memo(() => {
         console.log(res)
       })
   }, [])
-  return <div>Home</div>
+  return (
+    <HomeWrapper>
+      <HomeBanner />
+    </HomeWrapper>
+  )
 })
 
 export default Home
