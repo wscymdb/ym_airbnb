@@ -6,7 +6,7 @@ import { Carousel } from 'antd'
 const HomeBanner = memo(() => {
   return (
     <BannerWrapper>
-      <Carousel autoplay>
+      <Carousel>
         {[1, 2, 3].map((item) => (
           <div className="item" key={item}>
             <img src={require('@/assets/img/cover_01.jpeg')} alt="" />
